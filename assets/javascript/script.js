@@ -9,7 +9,7 @@ var api = "https://api.giphy.com/v1/gifs/search?";
 //My custome key for the API provided by the developer account that I signed up for.
 var apiKey = "&api_key=dVEhj3UXigqQgcr4tnFlTClyMXCEgZhZ";
 //My SEARCH query.
-var query = "&q=rainbow"
+var query = "&q="
 
 // ===== ===== ===== ===== ===== ===== =====
 
@@ -57,6 +57,8 @@ function showGif() {
     console.log("Entered the ** showGif() ** function.");
 
     var myGif = $(this).attr("data-name");
+    
+
     var queryURL = api + query + apiKey;
     console.log("[API] :: ", api);
     console.log("[Query] :: ", query);
@@ -106,10 +108,7 @@ function updateQuery(query) {
     console.log("Entered the ** updateQuery() ** function.");
 
 
-    console.log("Attempting to update the search query with >>data-name<<");
-    console.log(this.data-name);
-    query = query.concat(this.data-name);
-    console.log("[NEW QUERY] :: ", query);
+    
 
 
     console.log("Exited the ** updateQuery() ** function.");
@@ -119,9 +118,15 @@ function updateQuery(query) {
 
 // This function handles events where a button is clicked.
 $(".gif-button").on("click", function (event) {
+    console.log("CLICK LOGGED");
     event.preventDefault();
 
-    updateQuery(query);
+    console.log("Attempting to update the search query with >>data-name<<");
+    console.log(this.data-name);
+    query += this.data-name;
+    console.log("[NEW QUERY] :: ", query);
+
+    //updateQuery(query);
     
     showGif();
 
