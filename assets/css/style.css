@@ -1,0 +1,52 @@
+.clearfix {
+    clear: both;
+}
+
+.row {
+    display: table;
+    width: 100%;
+}
+
+.column {
+    display: table-cell;
+    background-color: orange;
+    width: 30%;
+    height:275px;
+    
+}
+
+#button-section {
+    width: 100%;
+    height: 100px;
+
+    background-color: yellow;
+}
+
+#button-section, button {
+    width: auto;
+    height: 35px;
+
+    
+}
+
+#gif-section {
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: red;
+
+    float: left;
+
+    overflow: hidden;
+    height: 80%;
+    width: 70%;
+}
+
+#search-section {
+    margin: auto;
+    background-color: blue;
+
+    float: right;
+
+    overflow: hidden;
+    width: 25%;
+}
