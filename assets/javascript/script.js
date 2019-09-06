@@ -16,7 +16,7 @@ var query = "&q="
 
 
 // ----- ----- ----- VARIABLES ----- ----- -----
-var buttons = ["rainbow", "taco", "hearthstone"];
+var buttons = ["rainbow", "tacos", "pugs", "huskies", "star wars", "memes", "disco"];
 
 
 var userSearch = "";
@@ -97,7 +97,7 @@ function showGif() {
         var divAddress = ["column1-a", "column1-b", "column1-c", "column2-a", "column2-b", "column2-c", "column3-a", "column3-b", "column3-c", "column4-a", "column4-b", "column4-c"];
 
         //clear the columns
-        for (a = 0; a < 10; a++) {
+        for (a = 0; a < 12; a++) {
             $("#"+divAddress[a]).empty();
         }
 
@@ -112,7 +112,7 @@ function showGif() {
             console.log("[RATING] :: ", rating);
 
             //create a p tag to hold the rating info
-            var pRating = $("<p>").text("Rating: " + rating);
+            var pRating = $("<p>").text("Rating: " + rating + ":");
             //render the p tage by appending to my div
             gifDiv.append(pRating);
 
